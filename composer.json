@@ -1,0 +1,23 @@
+{
+	"name": "mage2pro/cms"
+	,"version": "0.0.1"
+	,"description": "A content management system for my Magento 2 based websites."
+	,"type": "magento2-module"
+	,"homepage": "https://mage2.pro"
+	,"license": "proprietary"
+	,"authors": [{
+		"name": "Dmitry Fedyuk",
+		"email": "admin@mage2.pro",
+		"homepage": "https://mage2.pro/users/dmitry_fedyuk",
+		"role": "Developer"
+	}]
+	,"require": {"mage2pro/core": ">=2.6.0"}
+	,"autoload": {"files": ["registration.php"], "psr-4": {"Dfe\\Cms\\": ""}}
+	,"keywords": [
+		"CMS"
+		,"eCommerce"
+		,"Magento"
+		,"Magento 2"
+		,"Magento extension"
+	]
+}
