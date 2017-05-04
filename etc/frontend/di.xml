@@ -10,11 +10,11 @@
 					<item name='class' xsi:type='string'>Dfe\Cms\Router</item>
 					<item name='disable' xsi:type='boolean'>false</item>
 <!-- 2017-05-04
-This router will be called before all the built-in routers.
+This router will be called just after the built-in \Magento\Framework\App\Router\Base router.
 «The built-in frontend routers»: https://mage2.pro/t/3878
-«How is the CMS frontend router (Magento\Cms\Controller\Router) implemented?» https://mage2.pro/t/3879
+«How is the base router (Magento\Framework\App\Router\Base) implemented?» https://mage2.pro/t/3880
 -->
-					<item name='sortOrder' xsi:type='string'>19</item>
+					<item name='sortOrder' xsi:type='string'>21</item>
 				</item>
 			</argument>
 		</arguments>
