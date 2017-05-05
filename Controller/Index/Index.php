@@ -1,6 +1,6 @@
 <?php
 namespace Dfe\Cms\Controller\Index;
-use Df\Framework\Controller\Result\Json;
+use Magento\Framework\View\Result\Page as ResultPage;
 // 2017-05-04
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class Index extends \Df\Framework\Action {
@@ -9,9 +9,7 @@ class Index extends \Df\Framework\Action {
 	 * @final Unable to use the PHP «final» keyword here because of the M2 code generation.
 	 * @override
 	 * @see \Magento\Framework\App\ActionInterface::execute()
-	 * @return Json
+	 * @return ResultPage
 	 */
-	function execute() {
-		return Json::i('HELLO, WORLD!');
-	}
+	function execute() {return df_page_result('dfe_cms');}
 }
