@@ -19,4 +19,14 @@ This router will be called just after the built-in \Magento\Framework\App\Router
 			</argument>
 		</arguments>
 	</type>
+	<!--
+2017-05-06
+The purpose of this plugin is to set our custom design theme as the default Magento theme,
+without need to select our design theme manually by the store's administrator.
+@see \Magento\Theme\Model\View\Design::getConfigurationDesignTheme()
+«How are the default frontend («Luma») and backend design themes set?» https://mage2.pro/t/3897
+	-->
+	<type name='Magento\Theme\Model\View\Design'>
+		<plugin name='Dfe\Cms\Plugin\Design' type='Dfe\Cms\Plugin\Design'/>
+	</type>
 </config>

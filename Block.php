@@ -11,5 +11,5 @@ class Block extends _P {
 	 * @see \Magento\Payment\Block\Info::$_template
 	 * @return string
 	 */
-	final function getTemplate() {return df_cfg('df_cms/general/content') . '::main.md';}
+	final function getTemplate() {return dfe_cms_cfg_g()->content() . '::main.md';}
 }
