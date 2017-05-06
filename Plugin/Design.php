@@ -37,7 +37,7 @@ class Design extends Sb {
 	 * @used-by beforeGetConfigurationDesignTheme()
 	 * @used-by registration.php
 	 */
-	const THEME_ID = 'Dfe/cms';
+	const THEME_ID = 'df/cms';
 }
 
 
