@@ -49,6 +49,22 @@
 					<backend_model>Df\Config\Backend\Checkbox</backend_model>
 					<comment><![CDATA[Enable the «<a href='https://github.com/mage2pro/cms' target='_blank'>CMS</a>» extension?]]></comment>
 				</field>
+				<field
+					id='content'
+					translate='label'
+					type='select'
+					sortOrder='2'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Content</label>
+					<source_model>Dfe\Cms\Source\Content</source_model>
+					<comment><![CDATA[The content for the current website.
+<br/>It should have been previously installed as a separate Magento extension.
+<br/>For now, only the «stripe.mage2.pro» content is available.]]></comment>
+					<depends><field id='enable'>1</field></depends>
+				</field>
 			</group>
 		</section>
 	</system>

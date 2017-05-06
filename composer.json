@@ -1,6 +1,6 @@
 {
 	"name": "mage2pro/cms"
-	,"version": "0.0.6"
+	,"version": "0.0.7"
 	,"description": "A content management system for my Magento 2 based websites."
 	,"type": "magento2-module"
 	,"homepage": "https://mage2.pro"
