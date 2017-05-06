@@ -1,6 +1,7 @@
 <?php
 namespace Dfe\Cms;
 use Magento\Framework\View\Element\BlockInterface as IBlock;
+use Magento\Framework\View\TemplateEngine\Php;
 use Magento\Framework\View\TemplateEngineInterface as ITemplateEngine;
 // 2017-05-06
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
@@ -23,8 +24,9 @@ class TemplateEngine implements ITemplateEngine {
 	 * @param array(string => mixed) $vars
 	 * @return string
 	 */
-	function render(IBlock $block, $file, array $vars = []) {return dfe_cms_markdown(file_get_contents(
-		$file
-	));}
+	function render(IBlock $block, $file, array $vars = []) {
+		/** @var Php $php */
+		$php = df_o(Php::class);
+		return dfe_cms_markdown($php->render($block, $file, $vars));
+	}
 }
-
