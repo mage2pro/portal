@@ -28,9 +28,16 @@ class Design extends Sb {
 			 * The «_themes» property is not explicitly declared
 			 * by the @see \Magento\Theme\Model\View\Design class
 			 */
-			$sb->{'_themes'}['frontend'] = $sb->{'_themes'}['frontend'];
+			$sb->{'_themes'}['frontend'] = self::THEME_ID;
 		}
 	}
+
+	/**
+	 * 2017-05-07
+	 * @used-by beforeGetConfigurationDesignTheme()
+	 * @used-by registration.php
+	 */
+	const THEME_ID = 'Dfe/cms';
 }
 
 
