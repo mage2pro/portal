@@ -1,5 +1,5 @@
 <?php
-use Dfe\Cms\Plugin\Design;
+use Dfe\Cms\Plugin\Theme\Model\View\Design;
 use Magento\Framework\Component\ComponentRegistrar as R;
 R::register(R::MODULE, 'Dfe_Cms', __DIR__);
 // 2017-04-24

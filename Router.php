@@ -77,7 +77,7 @@ class Router implements IRouter {
 			 *	}
 			 * https://github.com/magento/magento2/blob/2.1.6/lib/internal/Magento/Framework/App/Router/Base.php#L197-L199
 			 */
-			$r->setModuleName('dfe-cms');
+			$r->setModuleName(self::FRONT_NAME);
 			$r->setControllerName('index');
 			$r->setActionName('index');
 			$r->setParam('id', $path);
@@ -85,4 +85,11 @@ class Router implements IRouter {
 		}
 		return $result;
 	}
+
+	/**
+	 * 2017-05-07
+	 * @used-by match()
+	 * @used-by \Dfe\Cms\Plugin\Store\Model\PathConfig::afterGetDefaultPath()
+	 */
+	const FRONT_NAME = 'dfe-cms';
 }
