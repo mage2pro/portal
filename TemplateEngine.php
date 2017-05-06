@@ -23,6 +23,8 @@ class TemplateEngine implements ITemplateEngine {
 	 * @param array(string => mixed) $vars
 	 * @return string
 	 */
-	function render(IBlock $block, $file, array $vars = []) {return file_get_contents($file);}
+	function render(IBlock $block, $file, array $vars = []) {return dfe_cms_markdown(file_get_contents(
+		$file
+	));}
 }
 
