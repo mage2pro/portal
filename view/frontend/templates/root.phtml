@@ -5,7 +5,7 @@
  * @var string $headAdditional	An empty string for now.
  * @var string $headAttributes	An empty string for now.
  * @var string $headContent		<meta>, <title>, <link>, <script>.
- * @var string $htmlAttributes	«lang="en-US"».
+ * @var string $htmlAttributes	«lang='en-US'».
  * @var string $layoutContent
  * @see \Magento\Framework\View\Result\Page::render()
  *		$output = $this->getLayout()->getOutput();
@@ -15,7 +15,12 @@
  */
 ?>
 <html <?= $htmlAttributes ?>>
-<head><?= df_cc_n($headAttributes, $requireJs, $headContent, $headAdditional) ?></head>
+<head>
+<?php /* 2017-05-07
+M2 does not provide a way to set an exact static asset ordering, so I add the font manyally. */ ?>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' />
+<?= df_cc_n($headAttributes, $requireJs, $headContent, $headAdditional) ?>
+</head>
 <body>
 <?= $layoutContent ?>
 <?php if (!df_is_localhost()) { ?>
@@ -30,7 +35,7 @@
 		a.src = g;
 		m.parentNode.insertBefore(a,m);
 	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', "<?= df_cfg('google/analytics/account') ?>", 'auto');
+	ga('create', '<?= df_cfg('google/analytics/account') ?>', 'auto');
 	ga('send', 'pageview');
 </script>
 <?php } ?>
