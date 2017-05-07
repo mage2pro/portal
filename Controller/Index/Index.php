@@ -11,5 +11,5 @@ class Index extends \Df\Framework\Action {
 	 * @see \Magento\Framework\App\ActionInterface::execute()
 	 * @return ResultPage
 	 */
-	function execute() {return df_page_result('dfe_cms');}
+	function execute() {return df_page_result('Dfe_Cms::root.phtml', 'dfe_cms');}
 }

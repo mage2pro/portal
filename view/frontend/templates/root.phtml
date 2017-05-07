@@ -1,0 +1,38 @@
+<!doctype html>
+<?php
+/**
+ * 2017-05-07
+ * @var string $headAdditional	An empty string for now.
+ * @var string $headAttributes	An empty string for now.
+ * @var string $headContent		<meta>, <title>, <link>, <script>.
+ * @var string $htmlAttributes	«lang="en-US"».
+ * @var string $layoutContent
+ * @see \Magento\Framework\View\Result\Page::render()
+ *		$output = $this->getLayout()->getOutput();
+ *		$this->assign('layoutContent', $output);
+ * https://github.com/magento/magento2/blob/2.1.6/lib/internal/Magento/Framework/View/Result/Page.php#L243-L244
+ * @var string $requireJs
+ */
+?>
+<html <?= $htmlAttributes ?>>
+<head><?= df_cc_n($headAttributes, $requireJs, $headContent, $headAdditional) ?></head>
+<body>
+<?= $layoutContent ?>
+<?php if (!df_is_localhost()) { ?>
+<script>
+	(function(i,s,o,g,r,a,m) {
+		i['GoogleAnalyticsObject']=r;
+		i[r] = i[r] || function(){(i[r].q=i[r].q||[]).push(arguments)};
+		i[r].l = 1*new Date();
+		a = s.createElement(o);
+		m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a,m);
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', "<?= df_cfg('google/analytics/account') ?>", 'auto');
+	ga('send', 'pageview');
+</script>
+<?php } ?>
+</body>
+</html>
