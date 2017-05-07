@@ -1,6 +1,5 @@
 <?xml version='1.0'?>
-<page_layouts
-	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+<page_layouts xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/PageLayout/etc/layouts.xsd'
 >
     <layout id='dfe-cms'><label>Mage2.PRO</label></layout>
