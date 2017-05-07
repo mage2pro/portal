@@ -3,6 +3,9 @@
 	layout='dfe-cms'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
 >
+	<head>
+        <remove src='mage/calendar.css'/>
+	</head>
 	<body>
 		<referenceContainer name='root'>
 			<block class='Dfe\Cms\Block' name='Dfe_Cms_Block'/>
