@@ -23,6 +23,7 @@ class Block extends _P {
 	protected function _prepareLayout() {
 		if (dfe_cms_cfg_g()->enable()) {
 			df_page_config()->addPageAsset('Dfe_Cms::main.css');
+			df_page_config()->addPageAsset(df_asset_third_party('HighlightJs/github.css'));
 		}
 	}
 }
