@@ -1,12 +1,10 @@
-<?xml version='1.0'?>
-<page
-	layout='1column'
-	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+<page xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	layout='dfe-cms'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
 >
 	<body>
-		<referenceContainer name='content'>
+		<referenceContainer name='root'>
 			<block class='Dfe\Cms\Block' name='Dfe_Cms_Block'/>
-		</referenceContainer>		
+		</referenceContainer>
 	</body>
 </page>
