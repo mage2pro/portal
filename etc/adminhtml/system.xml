@@ -49,7 +49,7 @@
 					<comment><![CDATA[Enable the «<a href='https://github.com/mage2pro/cms' target='_blank'>CMS</a>» extension?]]></comment>
 				</field>
 				<field
-					id='content'
+					id='moduleName'
 					translate='label'
 					type='select'
 					sortOrder='2'

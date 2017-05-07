@@ -8,7 +8,7 @@ final class General extends \Df\Config\Settings {
 	 * @used-by \Dfe\Cms\Block::getTemplate()
 	 * @return string
 	 */
-	function content() {return $this->v();}
+	function moduleName() {return $this->v();}
 	
 	/**
 	 * 2017-05-06
