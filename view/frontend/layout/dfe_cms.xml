@@ -6,8 +6,11 @@
 	<head><remove src='mage/calendar.css'/></head>
 	<body>
 		<referenceContainer name='root'>
-<!-- 2017-05-08 «How is the composite «requirejs-config.js» file added to the pages?» https://mage2.pro/t/3912 -->
-			<block class='Magento\RequireJs\Block\Html\Head\Config' name='requirejs-config'/>
+<!-- 2017-05-08
+«How is the composite «requirejs-config.js» file added to the pages?» https://mage2.pro/t/3912
+<block class='Magento\RequireJs\Block\Html\Head\Config' name='requirejs-config'/>
+Этот блок грузит дохерища всякого мусора, поэтому пока решил не включать его.
+-->
 			<block class='Dfe\Cms\Block' ifconfig='df_cms/general/enable' name='Dfe_Cms_Block'/>
 		</referenceContainer>
 	</body>
