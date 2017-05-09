@@ -13,7 +13,6 @@ class Index extends \Df\Framework\Action {
 	 */
 	function execute() {
 		df_page_title(dfe_cms_module('html/title'));
-		df_page_config()->setDescription(dfe_cms_module('html/description'));
 		return df_page_result('Dfe_Cms::root.phtml', 'dfe_cms');
 	}
 }

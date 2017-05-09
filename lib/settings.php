@@ -10,6 +10,9 @@ function dfe_cms_cfg_g() {return General::s();}
 
 /**
  * 2017-05-07
+ * 2017-05-09
+ * It is not used just now.
+ * It was used earlier here: https://github.com/mage2pro/cms/blob/0.2.7/Controller/Index/Index.php#L16
  * @param string $k
  * @return string|null|array(string => mixed)
  */
