@@ -12,7 +12,9 @@ class Block extends _P {
 	 * @see \Magento\Payment\Block\Info::$_template
 	 * @return string
 	 */
-	function getTemplate() {return dfe_cms_module_name() . '::main.phtml';}
+	function getTemplate() {return sprintf('%s::%s.phtml',
+		dfe_cms_module_name(), df_trim(df_request_o()->getPathInfo(), '/') ?: 'main'
+	);}
 
 	/**
 	 * 2017-05-07
