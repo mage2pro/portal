@@ -23,6 +23,24 @@ M2 does not provide a way to set an exact static asset ordering, so I add the fo
 </head>
 <body>
 <?= $layoutContent ?>
+<script>require([
+	'Df_Core/thirdParty/HighlightJs/main'
+	,'https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.js'
+], function(hljs, anchorJS) {
+	hljs.initHighlighting();
+	// 2017-05-09
+	// https://www.bryanbraun.com/anchorjs/#installation
+	// https://www.bryanbraun.com/anchorjs/#dont-run-it-too-late
+	(new anchorJS({
+		icon: ''
+		// 2017-05-09
+		// «right appends the anchor to the end of the element.
+		// left places it to the left, in the margin.»
+		// Default: right
+		// https://www.bryanbraun.com/anchorjs/#options
+		,placement: 'left'
+	})).add('h2');
+});</script>
 <?php if (!df_is_localhost()) { ?>
 <script>
 	(function(i,s,o,g,r,a,m) {
