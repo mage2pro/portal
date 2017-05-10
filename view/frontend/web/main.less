@@ -20,6 +20,26 @@ html.df-theme-cms {
 	}
 	nav > ul {
 		list-style-type: none;
-		> li {display: inline-block;}
+		display: block;
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+		width: 100%;
+		> li {
+			display: block; float: left;
+			// 2017-05-10 The primary logo in the top-left side of the pages.
+			&.logo {
+				margin-right: 2em;
+				> a {
+					background-repeat: no-repeat; background-position: left middle;
+					display: block; height: 40px; width: 147px;
+				}
+			}
+			// 2017-05-10 The top links.
+			&:not(.logo) {
+				margin-top: 0.45em;
+				&:not(:last-child) {margin-right: 0.9em;}
+			}
+		}
 	}
 }
