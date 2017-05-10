@@ -11,7 +11,7 @@
 <block class='Magento\RequireJs\Block\Html\Head\Config' name='requirejs-config'/>
 Этот блок грузит дохерища всякого мусора, поэтому пока решил не включать его.
 -->
-			<block class='Dfe\Cms\Block' ifconfig='df_cms/general/enable' name='Dfe_Cms_Block'/>
+			<block class='Dfe\Cms\Block\Content' ifconfig='df_cms/general/enable' name='Dfe_Cms_Content'/>
 		</referenceContainer>
 	</body>
 </page>

@@ -1,9 +1,9 @@
 <?php
-namespace Dfe\Cms;
+namespace Dfe\Cms\Block;
 use Magento\Framework\View\Element\Template as _P;
 // 2017-05-05
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
-class Block extends _P {
+class Content extends _P {
 	/**
 	 * 2017-05-05
 	 * @final Unable to use the PHP «final» keyword here because of the M2 code generation.

@@ -5,7 +5,7 @@ namespace Dfe\Cms\Settings;
 final class General extends \Df\Config\Settings {
 	/**        
 	 * 2017-05-06  
-	 * @used-by \Dfe\Cms\Block::getTemplate()
+	 * @used-by \Dfe\Cms\Block\Content::getTemplate()
 	 * @return string
 	 */
 	function moduleName() {return $this->v();}

@@ -22,7 +22,7 @@ function dfe_cms_module($k) {return dfak(dfcf(function() {return
 
 /**
  * 2017-05-07
- * @used-by \Dfe\Cms\Block::getTemplate()
+ * @used-by \Dfe\Cms\Block\Content::getTemplate()
  * @return string
  */
 function dfe_cms_module_name() {return dfe_cms_cfg_g()->moduleName();}
