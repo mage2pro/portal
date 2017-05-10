@@ -12,7 +12,7 @@ class Content extends _P {
 	 * @see \Magento\Payment\Block\Info::$_template
 	 * @return string
 	 */
-	function getTemplate() {return sprintf('%s::%s.phtml',
+	function getTemplate() {return sprintf('%s::page/%s.phtml',
 		dfe_cms_module_name(), df_trim(df_request_o()->getPathInfo(), '/') ?: 'main'
 	);}
 
