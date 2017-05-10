@@ -6,5 +6,5 @@ final class Basic extends TestCase {
 	function t01() {echo df_dump(dfe_cms_plugins());}
 
 	/** @test 2017-05-10 */
-	function t02() {echo df_dump(df_github_key());}
+	function t02() {echo df_dump(df_github_repo_version('mage2pro/stripe'));}
 }
