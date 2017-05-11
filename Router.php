@@ -48,7 +48,8 @@ class Router implements IRouter {
 		 * @uses \Magento\Framework\App\Request\Http::getPathInfo() returns a string like «/about-us/».
 		 * @var string $path
 		 */
-		if ('customers' === ($path = df_trim($r->getPathInfo(), '/'))) {
+		$path = df_trim($r->getPathInfo(), '/');
+		if (df_phtml_exists("page/$path.phtml", dfe_cms_module_name())) {
 			/**
 			 * 2017-05-04
 			 * Note #1

@@ -1,6 +1,6 @@
 {
 	"name": "mage2pro/cms"
-	,"version": "0.3.6"
+	,"version": "0.3.7"
 	,"description": "A content management system for my Magento 2 based websites."
 	,"type": "magento2-module"
 	,"homepage": "https://mage2.pro"
@@ -11,7 +11,7 @@
 		"homepage": "https://mage2.pro/users/dmitry_fedyuk",
 		"role": "Developer"
 	}]
-	,"require": {"erusev/parsedown": ">=1.6.2", "mage2pro/core": ">=2.6.16"}
+	,"require": {"erusev/parsedown": ">=1.6.2", "mage2pro/core": ">=2.6.18"}
 	,"autoload": {"files": ["registration.php"], "psr-4": {"Dfe\\Cms\\": ""}}
 	,"keywords": [
 		"CMS"
