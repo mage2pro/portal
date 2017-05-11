@@ -31,15 +31,12 @@ M2 does not provide a way to set an exact static asset ordering, so I add the fo
 	// 2017-05-09
 	// https://www.bryanbraun.com/anchorjs/#installation
 	// https://www.bryanbraun.com/anchorjs/#dont-run-it-too-late
-	(new anchorJS({
-		icon: ''
-		// 2017-05-09
-		// «right appends the anchor to the end of the element.
-		// left places it to the left, in the margin.»
-		// Default: right
-		// https://www.bryanbraun.com/anchorjs/#options
-		,placement: 'left'
-	})).add('h2');
+	// «right appends the anchor to the end of the element.
+	// left places it to the left, in the margin.»
+	// Default: right
+	// https://www.bryanbraun.com/anchorjs/#options
+	(new anchorJS({icon: '', placement: 'left'})).add('h2');
+	(new anchorJS({icon: '', placement: 'left'})).add('h3')
 });</script>
 <?php if (!df_is_localhost()) { ?>
 <script>
