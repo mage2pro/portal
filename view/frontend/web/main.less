@@ -42,7 +42,13 @@ html.df-theme-cms {
 	}
 	table.settings {
 		border-collapse: collapse;
-		tr {border-spacing: 0; &:nth-child(2n) {background-color: #f6f8fa;}}
+		tr {
+			border-spacing: 0;
+			// 2017-05-11
+			// I set a non-white backhtound only to the first column,
+			// because the second column contains an image with white background.
+			&:nth-child(2n) td:first-child {background-color: #f6f8fa;}
+		}
 		td {
 			border: 1px solid #dfe2e5; padding: 6px 13px;
 			&:first-child {font-weight: bold;}
