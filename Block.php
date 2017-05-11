@@ -1,7 +1,11 @@
 <?php
 namespace Dfe\Cms;
 use Magento\Framework\View\Element\Template as _P;
-// 2017-05-11
+/**
+ * 2017-05-11
+ * @see \Dfe\Cms\Block\Content
+ * @see \Dfe\Cms\Block\Nav
+ */
 abstract class Block extends _P {
 	/**
 	 * 2017-05-11
