@@ -5,8 +5,8 @@
 	<type name='Magento\Framework\App\RouterList'>
 		<arguments>
 			<argument name='routerList' xsi:type='array'>
-				<item name='dfe-cms' xsi:type='array'>
-					<item name='class' xsi:type='string'>Dfe\Cms\Router</item>
+				<item name='dfe-portal' xsi:type='array'>
+					<item name='class' xsi:type='string'>Dfe\Portal\Router</item>
 					<item name='disable' xsi:type='boolean'>false</item>
 <!-- 2017-05-04
 This router will be called just after the built-in \Magento\Framework\App\Router\Base router.
@@ -24,7 +24,7 @@ The purpose of this plugin is to set the frontend home page router automatically
 without need to do it manually by the store's administrator.
 -->
 	<type name='Magento\Store\Model\PathConfig'>
-		<plugin name='Dfe\Cms\Plugin\Store\Model\PathConfig' type='Dfe\Cms\Plugin\Store\Model\PathConfig'/>
+		<plugin name='Dfe\Portal\Plugin\Store\Model\PathConfig' type='Dfe\Portal\Plugin\Store\Model\PathConfig'/>
 	</type>
 <!--
 2017-05-06
@@ -34,6 +34,6 @@ without need to select our design theme manually by the store's administrator.
 «How are the default frontend («Luma») and backend design themes set?» https://mage2.pro/t/3897
 -->
 	<type name='Magento\Theme\Model\View\Design'>
-		<plugin name='Dfe\Cms\Plugin\Theme\Model\View\Design' type='Dfe\Cms\Plugin\Theme\Model\View\Design'/>
+		<plugin name='Dfe\Portal\Plugin\Theme\Model\View\Design' type='Dfe\Portal\Plugin\Theme\Model\View\Design'/>
 	</type>
 </config>

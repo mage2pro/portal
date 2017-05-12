@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\Cms;
+namespace Dfe\Portal;
 use Magento\Framework\View\Element\BlockInterface as IBlock;
 use Magento\Framework\View\TemplateEngine\Php;
 use Magento\Framework\View\TemplateEngineInterface as ITemplateEngine;
@@ -27,6 +27,6 @@ class TemplateEngine implements ITemplateEngine {
 	function render(IBlock $block, $file, array $vars = []) {
 		/** @var Php $php */
 		$php = df_o(Php::class);
-		return dfe_cms_markdown($php->render($block, $file, $vars));
+		return dfe_portal_markdown($php->render($block, $file, $vars));
 	}
 }

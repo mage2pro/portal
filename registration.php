@@ -1,7 +1,7 @@
 <?php
-use Dfe\Cms\Plugin\Theme\Model\View\Design;
+use Dfe\Portal\Plugin\Theme\Model\View\Design;
 use Magento\Framework\Component\ComponentRegistrar as R;
-R::register(R::MODULE, 'Dfe_Cms', __DIR__);
+R::register(R::MODULE, 'Dfe_Portal', __DIR__);
 // 2017-04-24
 // К сожалению, прямолинейным образом вынести этот код
 // в повторноиспользуемую функцию df_lib() не получается:

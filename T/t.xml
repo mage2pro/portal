@@ -5,7 +5,7 @@
 	convertNoticesToExceptions="false"
 	convertWarningsToExceptions="false"
 >
-	<testsuite name='CMS'>
+	<testsuite name='Portal'>
 		<directory suffix='.php'>.</directory>
 	</testsuite>
 </phpunit>

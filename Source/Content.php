@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\Cms\Source;
+namespace Dfe\Portal\Source;
 // 2017-05-06
 final class Content extends \Df\Config\Source {
 	/**
@@ -9,7 +9,7 @@ final class Content extends \Df\Config\Source {
 	 * @used-by \Df\Config\Source::toOptionArray()
 	 * @return array(string => string)
 	 */
-	protected function map() {return dfe_cms_plugins();}
+	protected function map() {return dfe_portal_plugins();}
 }
 
 

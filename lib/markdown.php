@@ -5,4 +5,4 @@ use Parsedown as M;
  * @param string $s
  * @return string
  */
-function dfe_cms_markdown($s) {return (new M)->text($s);}
+function dfe_portal_markdown($s) {return (new M)->text($s);}

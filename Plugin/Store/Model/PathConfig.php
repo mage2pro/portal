@@ -1,6 +1,6 @@
 <?php
-namespace Dfe\Cms\Plugin\Store\Model;
-use Dfe\Cms\Router;
+namespace Dfe\Portal\Plugin\Store\Model;
+use Dfe\Portal\Router;
 use Magento\Store\Model\PathConfig as Sb;
 // 2017-05-07
 final class PathConfig  {
@@ -14,7 +14,7 @@ final class PathConfig  {
 	 * @param string $r
 	 * @return string
 	 */
-	function afterGetDefaultPath(Sb $sb, $r) {return !dfe_cms_cfg_g()->enable() ? $r : Router::FRONT_NAME;}
+	function afterGetDefaultPath(Sb $sb, $r) {return !dfe_portal_cfg_g()->enable() ? $r : Router::FRONT_NAME;}
 }
 
 

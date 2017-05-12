@@ -1,11 +1,11 @@
 <?php
-namespace Dfe\Cms\Settings;
+namespace Dfe\Portal\Settings;
 // 2017-05-06
 /** @method static General s() */
 final class General extends \Df\Config\Settings {
 	/**        
 	 * 2017-05-06  
-	 * @used-by \Dfe\Cms\Block\Content::getTemplate()
+	 * @used-by \Dfe\Portal\Block\Content::getTemplate()
 	 * @return string
 	 */
 	function moduleName() {return $this->v();}
@@ -17,7 +17,7 @@ final class General extends \Df\Config\Settings {
 	 * @used-by \Df\Config\Settings::v()
 	 * @return string
 	 */
-	protected function prefix() {return 'df_cms/general';}	
+	protected function prefix() {return 'df_portal/general';}
 }
 
 

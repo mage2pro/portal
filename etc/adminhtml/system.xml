@@ -4,7 +4,7 @@
 >
 	<system>
 		<section
-			id='df_cms'
+			id='df_portal'
             translate='label'
             type='text'
             showInDefault='1'
@@ -19,21 +19,21 @@
 в английском алфавите.
 -->
 			<tab>_df</tab>
-			<label>CMS</label>
+			<label>Portal</label>
 			<class>separator-top</class>
 			<!-- 2015-10-05 https://mage2.pro/t/114 -->
-			<resource>Dfe_Cms::config</resource>
+			<resource>Dfe_Portal::config</resource>
 			<group
 				id='general'
 				translate='label'
 				type='text'
-				sortOrder='313'
+				sortOrder='1615'
 				showInDefault='1'
 				showInWebsite='1'
 				showInStore='1'
 			>
 				<label>General</label>
-				<dfExtension>Dfe_Cms</dfExtension>
+				<dfExtension>Dfe_Portal</dfExtension>
 				<frontend_model>Df\Config\Fieldset</frontend_model>
 				<field
 					id='enable'
@@ -46,7 +46,7 @@
 				>
 					<label>Enable?</label>
 					<backend_model>Df\Config\Backend\Checkbox</backend_model>
-					<comment><![CDATA[Enable the «<a href='https://github.com/mage2pro/cms' target='_blank'>CMS</a>» extension?]]></comment>
+					<comment><![CDATA[Enable the «<a href='https://github.com/mage2pro/portal' target='_blank'>Web Portal</a>» extension?]]></comment>
 				</field>
 				<field
 					id='moduleName'
@@ -58,7 +58,7 @@
 					showInStore='1'
 				>
 					<label>Content</label>
-					<source_model>Dfe\Cms\Source\Content</source_model>
+					<source_model>Dfe\Portal\Source\Content</source_model>
 					<comment><![CDATA[The content for the current website.
 <br/>It should have been previously installed as a separate Magento extension.
 <br/>For now, only the «stripe.mage2.pro» content is available.]]></comment>

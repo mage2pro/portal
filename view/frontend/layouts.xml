@@ -2,5 +2,5 @@
 <page_layouts xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/PageLayout/etc/layouts.xsd'
 >
-    <layout id='dfe-cms'><label>Mage2.PRO</label></layout>
+    <layout id='dfe-portal'><label>Mage2.PRO</label></layout>
 </page_layouts>

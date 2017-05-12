@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\Cms\Plugin\Theme\Model\View;
+namespace Dfe\Portal\Plugin\Theme\Model\View;
 use Magento\Theme\Model\View\Design as Sb;
 // 2017-05-06
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
@@ -20,7 +20,7 @@ class Design extends Sb {
 	 * @param Sb $sb
 	 */
 	function beforeGetConfigurationDesignTheme(Sb $sb) {
-		if (dfe_cms_cfg_g()->enable()) {
+		if (dfe_portal_cfg_g()->enable()) {
 			/**
 			 * 2017-05-06
 			 * We will set our custom design theme here.
@@ -37,7 +37,7 @@ class Design extends Sb {
 	 * @used-by beforeGetConfigurationDesignTheme()
 	 * @used-by registration.php
 	 */
-	const THEME_ID = 'df/cms';
+	const THEME_ID = 'df/portal';
 }
 
 

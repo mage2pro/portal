@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <page xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-	layout='dfe-cms'
+	layout='dfe-portal'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
 >
 	<head><remove src='mage/calendar.css'/></head>
@@ -11,8 +11,8 @@
 <block class='Magento\RequireJs\Block\Html\Head\Config' name='requirejs-config'/>
 Этот блок грузит дохерища всякого мусора, поэтому пока решил не включать его.
 -->
-			<block class='Dfe\Cms\Block\Nav' ifconfig='df_cms/general/enable' name='Dfe_Cms_Nav'/>
-			<block class='Dfe\Cms\Block\Content' ifconfig='df_cms/general/enable' name='Dfe_Cms_Content'/>
+			<block class='Dfe\Portal\Block\Nav' ifconfig='df_portal/general/enable' name='Dfe_Portal_Nav'/>
+			<block class='Dfe\Portal\Block\Content' ifconfig='df_portal/general/enable' name='Dfe_Portal_Content'/>
 		</referenceContainer>
 	</body>
 </page>

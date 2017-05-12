@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\Cms;
+namespace Dfe\Portal;
 use Magento\Framework\App\Action\Forward as ActionForward;
 use Magento\Framework\App\ActionInterface as IAction;
 use Magento\Framework\App\Request\Http as HttpRequest;
@@ -49,7 +49,7 @@ class Router implements IRouter {
 		 * @var string $path
 		 */
 		$path = df_trim($r->getPathInfo(), '/');
-		if (df_phtml_exists("page/$path.phtml", dfe_cms_module_name())) {
+		if (df_phtml_exists("page/$path.phtml", dfe_portal_module_name())) {
 			/**
 			 * 2017-05-04
 			 * Note #1
@@ -62,8 +62,8 @@ class Router implements IRouter {
 			 * The @uses \Magento\Framework\App\Request\Http::setModuleName() parameters
 			 * should be the same as the specified as the «frontName» attribute value in the routes.xml:
 			 *	<router id='standard'>
-			 *		<route id='Dfe_Cms' frontName='dfe-cms'>
-			 *			<module name='Dfe_Cms'/>
+			 *		<route id='Dfe_Portal' frontName='dfe-portal'>
+			 *			<module name='Dfe_Portal'/>
 			 *		</route>
 			 *	</router>
 			 * It will be used by the base router: @see \Magento\Framework\App\Router\Base
@@ -90,7 +90,7 @@ class Router implements IRouter {
 	/**
 	 * 2017-05-07
 	 * @used-by match()
-	 * @used-by \Dfe\Cms\Plugin\Store\Model\PathConfig::afterGetDefaultPath()
+	 * @used-by \Dfe\Portal\Plugin\Store\Model\PathConfig::afterGetDefaultPath()
 	 */
-	const FRONT_NAME = 'dfe-cms';
+	const FRONT_NAME = 'dfe-portal';
 }

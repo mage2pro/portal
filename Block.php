@@ -1,10 +1,10 @@
 <?php
-namespace Dfe\Cms;
+namespace Dfe\Portal;
 use Magento\Framework\View\Element\Template as _P;
 /**
  * 2017-05-11
- * @see \Dfe\Cms\Block\Content
- * @see \Dfe\Cms\Block\Nav
+ * @see \Dfe\Portal\Block\Content
+ * @see \Dfe\Portal\Block\Nav
  */
 abstract class Block extends _P {
 	/**
@@ -21,11 +21,11 @@ abstract class Block extends _P {
 	/**
 	 * 2017-05-11
 	 * @used-by img()
-	 * @used-by \Dfe\Cms\Block\Content::_prepareLayout
-	 * @used-by \Dfe\Cms\Block\Content::getTemplate
-	 * @used-by \Dfe\Cms\Block\Nav::getTemplate()
+	 * @used-by \Dfe\Portal\Block\Content::_prepareLayout
+	 * @used-by \Dfe\Portal\Block\Content::getTemplate
+	 * @used-by \Dfe\Portal\Block\Nav::getTemplate()
 	 * @param string $file
 	 * @return string
 	 */
-	final protected function m($file) {return dfe_cms_module_name() . "::$file";}
+	final protected function m($file) {return dfe_portal_module_name() . "::$file";}
 }

@@ -1,8 +1,8 @@
 <?php
-namespace Dfe\Cms\Block;
+namespace Dfe\Portal\Block;
 // 2017-05-05
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
-class Content extends \Dfe\Cms\Block {
+class Content extends \Dfe\Portal\Block {
 	/**
 	 * 2017-05-05
 	 * @final Unable to use the PHP «final» keyword here because of the M2 code generation.
@@ -22,8 +22,8 @@ class Content extends \Dfe\Cms\Block {
 	 * @used-by \Magento\Framework\View\Element\AbstractBlock::setLayout()
 	 */
 	protected function _prepareLayout() {
-		if (dfe_cms_cfg_g()->enable()) {
-			df_page_config()->addPageAsset('Dfe_Cms::main.css');
+		if (dfe_portal_cfg_g()->enable()) {
+			df_page_config()->addPageAsset('Dfe_Portal::main.css');
 			df_page_config()->addPageAsset($this->m('main.css'));
 			df_page_config()->addPageAsset(df_asset_third_party('HighlightJs/github.css'));
 		}
