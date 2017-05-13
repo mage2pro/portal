@@ -13,6 +13,11 @@ class Index extends \Df\Framework\Action {
 	 */
 	function execute() {
 		df_page_title(dfe_portal_module('html/title'));
-		return df_page_result('Dfe_Portal::root.phtml', 'dfe_portal');
+		return df_page_result('Dfe_Portal::root.phtml', 'dfe_portal',
+			// 2017-05-13
+			// I add the layout handle for the current page
+			// to be able to set the <title> and other HTL tags through the <handle>.xml
+			'dfe_portal_' . str_replace('/', '_', df_trim(df_request_o()->getPathInfo(), '/'))
+		);
 	}
 }
