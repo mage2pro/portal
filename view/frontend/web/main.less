@@ -40,20 +40,19 @@ html.df-theme-portal {
 			}
 		}
 	}
-	table.settings {
+	table.content {
+		th {text-align: left;}
 		border-collapse: collapse;
-		tr {
-			border-spacing: 0;
+		tr {border-spacing: 0; &:nth-child(2n) td {background-color: #f6f8fa;}}
+		td, th {border: 1px solid #dfe2e5; padding: 6px 13px;}
+		&.settings {
 			// 2017-05-11
 			// I set a non-white backhtound only to the first column,
 			// because the second column contains an image with white background.
-			&:nth-child(2n) td:first-child {background-color: #f6f8fa;}
+			tr {&:nth-child(2n) td:not(:first-child) {background-color: transparent;}}
+			td {&:first-child {font-weight: bold; width: 30%;} }
+			ul {margin: 0.2em 0;}
 		}
-		td {
-			border: 1px solid #dfe2e5; padding: 6px 13px;
-			&:first-child {font-weight: bold; width: 30%;}
-		}
-		ul {margin: 0.2em 0;}
 	}
 	ul {margin: 0;}
 }
