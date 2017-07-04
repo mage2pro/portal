@@ -5,10 +5,8 @@
 	<system>
 		<section
 			id='df_portal'
+            showInDefault='1' showInStore='1' showInWebsite='1'
             translate='label'
-            showInDefault='1'
-            showInWebsite='1'
-            showInStore='1'
 		>
 <!--
 2015-09-25
@@ -24,23 +22,19 @@
 			<resource>Dfe_Portal::config</resource>
 			<group
 				id='general'
-				translate='label'
+				showInDefault='1' showInStore='1' showInWebsite='1'
 				sortOrder='1615'
-				showInDefault='1'
-				showInWebsite='1'
-				showInStore='1'
+				translate='label'
 			>
 				<label>General</label>
 				<dfExtension>Dfe_Portal</dfExtension>
 				<frontend_model>Df\Config\Fieldset</frontend_model>
 				<field
 					id='enable'
+					showInDefault='1' showInStore='1' showInWebsite='1'
+					sortOrder='1'
 					translate='label'
 					type='Df\Framework\Form\Element\Checkbox'
-					sortOrder='1'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
 				>
 					<label>Enable?</label>
 					<backend_model>Df\Config\Backend\Checkbox</backend_model>
@@ -48,12 +42,10 @@
 				</field>
 				<field
 					id='moduleName'
+					showInDefault='1' showInStore='1' showInWebsite='1'
+					sortOrder='2'
 					translate='label'
 					type='select'
-					sortOrder='2'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
 				>
 					<label>Content</label>
 					<source_model>Dfe\Portal\Source\Content</source_model>
