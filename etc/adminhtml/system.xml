@@ -51,7 +51,7 @@
 					<source_model>Dfe\Portal\Source\Content</source_model>
 					<comment><![CDATA[The content for the current website.
 <br/>It should have been previously installed as a separate Magento extension.
-<br/>For now, only the «stripe.mage2.pro» content is available.]]></comment>
+<br/>For now, the only «stripe.mage2.pro» content is available.]]></comment>
 					<depends><field id='enable'>1</field></depends>
 				</field>
 			</group>
