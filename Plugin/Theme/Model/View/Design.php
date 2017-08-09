@@ -11,12 +11,12 @@ class Design extends Sb {
 	function __construct() {}
 
 	/**
-	 * 2017-05-06
+	 * 2017-05-06                                                                                     
+	 * @final Unable to use the PHP «final» keyword here because of the M2 code generation.
 	 * The purpose of this plugin is to set our custom design theme as the default Magento theme,
 	 * without need to select our design theme manually by the store's administrator.
 	 * @see \Magento\Theme\Model\View\Design::getConfigurationDesignTheme()
 	 * «How are the default frontend («Luma») and backend design themes set?» https://mage2.pro/t/3897
-	 * @final
 	 * @param Sb $sb
 	 */
 	function beforeGetConfigurationDesignTheme(Sb $sb) {

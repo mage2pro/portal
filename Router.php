@@ -41,8 +41,7 @@ class Router implements IRouter {
 	 * @return IAction|ActionForward|null
 	 */
 	function match(IRequest $r) {
-		/** @var IAction|ActionForward|null $result */
-		$result = null;
+		$result = null; /** @var IAction|ActionForward|null $result */
 		/**
 		 * 2017-05-04
 		 * @uses \Magento\Framework\App\Request\Http::getPathInfo() returns a string like «/about-us/».
