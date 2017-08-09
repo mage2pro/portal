@@ -8,7 +8,10 @@ class Index extends \Df\Framework\Action {
 	 * 2017-05-04
 	 * @final Unable to use the PHP «final» keyword here because of the M2 code generation.
 	 * @override
-	 * @see \Magento\Framework\App\ActionInterface::execute()
+	 * @see \Magento\Framework\App\ActionInterface::execute()  
+	 * @used-by \Magento\Framework\App\Action\Action::dispatch():
+	 * 		$result = $this->execute();
+	 * https://github.com/magento/magento2/blob/2.2.0-RC1.8/lib/internal/Magento/Framework/App/Action/Action.php#L84-L125
 	 * @return ResultPage
 	 */
 	function execute() {
