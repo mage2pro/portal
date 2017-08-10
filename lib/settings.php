@@ -16,9 +16,9 @@ function dfe_portal_cfg_g() {return General::s();}
  * @param string $k
  * @return string|null|array(string => mixed)
  */
-function dfe_portal_module($k) {return dfak(dfcf(function() {return
-	dfa_deep(df_package(dfe_portal_module_name()), 'df/portal')
-;}), $k);}
+function dfe_portal_module($k) {return dfak(dfcf(function() {return dfa_deep(
+	df_package(dfe_portal_module_name()), 'df/portal'
+);}), $k);}
 
 /**
  * 2017-05-07
