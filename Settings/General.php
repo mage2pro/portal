@@ -19,5 +19,3 @@ final class General extends \Df\Config\Settings {
 	 */
 	protected function prefix() {return 'df_portal/general';}
 }
-
-
