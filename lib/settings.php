@@ -10,15 +10,13 @@ function dfe_portal_cfg_g() {return General::s();}
 
 /**
  * 2017-05-07
- * 2017-05-09
- * Currently, it is not used.
- * It was used earlier here: https://github.com/mage2pro/cms/blob/0.2.7/Controller/Index/Index.php#L16
+ * @used-by \Dfe\Portal\Controller\Index\Index::execute()
  * @param string $k
  * @return string|null|array(string => mixed)
  */
-function dfe_portal_module($k) {return dfak(dfcf(function() {return dfa_deep(
+function dfe_portal_module($k) {return dfac(function() {return dfa_deep(
 	df_package(dfe_portal_module_name()), 'df/portal'
-);}), $k);}
+);}, $k);}
 
 /**
  * 2017-05-07
