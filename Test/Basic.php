@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\Portal\T;
+namespace Dfe\Portal\Test;
 // 2017-05-05
 final class Basic extends TestCase {
 	/** 2017-05-05 */
