@@ -21,11 +21,11 @@ abstract class Block extends _P {
 	/**
 	 * 2017-05-11
 	 * @used-by img()
-	 * @used-by \Dfe\Portal\Block\Content::_prepareLayout
-	 * @used-by \Dfe\Portal\Block\Content::getTemplate
+	 * @used-by \Dfe\Portal\Block\Content::_prepareLayout()
+	 * @used-by \Dfe\Portal\Block\Content::getTemplate()
 	 * @used-by \Dfe\Portal\Block\Nav::getTemplate()
-	 * @param string $file
+	 * @param string $f
 	 * @return string
 	 */
-	final protected function m($file) {return dfe_portal_module_name() . "::$file";}
+	final protected function m($f) {return df_asset_name($f, dfe_portal_module_name());}
 }
