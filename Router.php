@@ -5,7 +5,7 @@ use Magento\Framework\App\ActionInterface as IAction;
 use Magento\Framework\App\Request\Http as HttpRequest;
 use Magento\Framework\App\RequestInterface as IRequest;
 use Magento\Framework\App\RouterInterface as IRouter;
-// 2017-05-04
+# 2017-05-04
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class Router implements IRouter {
 	/**

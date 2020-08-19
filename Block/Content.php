@@ -1,6 +1,6 @@
 <?php
 namespace Dfe\Portal\Block;
-// 2017-05-05
+# 2017-05-05
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class Content extends \Dfe\Portal\Block {
 	/**

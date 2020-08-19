@@ -1,6 +1,6 @@
 <?php
 namespace Dfe\Portal\Settings;
-// 2017-05-06
+# 2017-05-06
 /** @method static General s() */
 final class General extends \Df\Config\Settings {
 	/**        

@@ -1,6 +1,6 @@
 <?php
 namespace Dfe\Portal\Source;
-// 2017-05-06
+# 2017-05-06
 final class Content extends \Df\Config\Source {
 	/**
 	 * 2017-05-06

@@ -2,7 +2,7 @@
 namespace Dfe\Portal\Plugin\Store\Model;
 use Dfe\Portal\Router;
 use Magento\Store\Model\PathConfig as Sb;
-// 2017-05-07
+# 2017-05-07
 final class PathConfig  {
 	/**
 	 * 2017-05-07

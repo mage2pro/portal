@@ -1,7 +1,7 @@
 <?php
 namespace Dfe\Portal\Plugin\Theme\Model\View;
 use Magento\Theme\Model\View\Design as Sb;
-// 2017-05-06
+# 2017-05-06
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class Design extends Sb {
 	/** 2017-05-06 @final */
