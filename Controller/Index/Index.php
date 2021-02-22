@@ -1,6 +1,6 @@
 <?php
 namespace Dfe\Portal\Controller\Index;
-use Magento\Framework\View\Result\Page as ResultPage;
+use Magento\Framework\View\Result\Page as R;
 # 2017-05-04
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class Index extends \Df\Framework\Action {
@@ -12,7 +12,7 @@ class Index extends \Df\Framework\Action {
 	 * @used-by \Magento\Framework\App\Action\Action::dispatch():
 	 * 		$result = $this->execute();
 	 * https://github.com/magento/magento2/blob/2.2.1/lib/internal/Magento/Framework/App/Action/Action.php#L84-L125
-	 * @return ResultPage
+	 * @return R
 	 */
 	function execute() {
 		df_page_title(dfe_portal_module('html/title'));
