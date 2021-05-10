@@ -81,7 +81,7 @@ class Router implements IRouter {
 			$req->setControllerName('index');
 			$req->setActionName('index');
 			$req->setParam('id', $path);
-			$r = df_action_create(ActionForward::class);
+			$r = df_action_c_forward();
 		}
 		return $r;
 	}
