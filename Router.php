@@ -37,17 +37,17 @@ class Router implements IRouter {
 	 *			}
 	 *		}
 	 * https://github.com/magento/magento2/blob/2.1.6/lib/internal/Magento/Framework/App/FrontController.php#L48-L67
-	 * @param IRequest|HttpRequest $r
+	 * @param IRequest|HttpRequest $req
 	 * @return IAction|ActionForward|null
 	 */
-	function match(IRequest $r) {
-		$result = null; /** @var IAction|ActionForward|null $result */
+	function match(IRequest $req) {
+		$r = null; /** @var IAction|ActionForward|null $r */
 		/**
 		 * 2017-05-04
 		 * @uses \Magento\Framework\App\Request\Http::getPathInfo() returns a string like «/about-us/».
 		 * @var string $path
 		 */
-		$path = df_trim($r->getPathInfo(), '/');
+		$path = df_trim($req->getPathInfo(), '/');
 		if (df_phtml_exists("page/$path.phtml", dfe_portal_module_name())) {
 			/**
 			 * 2017-05-04
@@ -77,13 +77,13 @@ class Router implements IRouter {
 			 *	}
 			 * https://github.com/magento/magento2/blob/2.1.6/lib/internal/Magento/Framework/App/Router/Base.php#L197-L199
 			 */
-			$r->setModuleName(self::FRONT_NAME);
-			$r->setControllerName('index');
-			$r->setActionName('index');
-			$r->setParam('id', $path);
-			$result = df_action_create(ActionForward::class);
+			$req->setModuleName(self::FRONT_NAME);
+			$req->setControllerName('index');
+			$req->setActionName('index');
+			$req->setParam('id', $path);
+			$r = df_action_create(ActionForward::class);
 		}
-		return $result;
+		return $r;
 	}
 
 	/**
