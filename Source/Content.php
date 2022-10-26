@@ -9,7 +9,5 @@ final class Content extends \Df\Config\Source {
 	 * @used-by \Df\Config\Source::toOptionArray()
 	 * @return array(string => string)
 	 */
-	protected function map() {return dfe_portal_plugins();}
+	protected function map():array {return dfe_portal_plugins();}
 }
-
-
