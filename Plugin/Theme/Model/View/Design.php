@@ -31,7 +31,7 @@ class Design extends Sb {
 
 	/**
 	 * 2017-05-07
-	 * @used-by beforeGetConfigurationDesignTheme()
+	 * @used-by self::beforeGetConfigurationDesignTheme()
 	 * @used-by registration.php
 	 */
 	const THEME_ID = 'df/portal';
