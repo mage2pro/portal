@@ -24,5 +24,5 @@ abstract class Block extends _P {
 	 * @param string $f
 	 * @return string
 	 */
-	final protected function m($f) {return df_asset_name($f, dfe_portal_module_name());}
+	final protected function m(string $f) {return df_asset_name($f, dfe_portal_module_name());}
 }
