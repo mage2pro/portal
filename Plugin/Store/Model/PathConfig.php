@@ -9,10 +9,6 @@ final class PathConfig  {
 	 * The purpose of this plugin is to set the frontend home page router automatically,
 	 * without need to do it manually by the store's administrator.
 	 * @see \Magento\Store\Model\PathConfig::getDefaultPath()
-	 * @final
-	 * @param Sb $sb
-	 * @param string $r
-	 * @return string
 	 */
-	function afterGetDefaultPath(Sb $sb, string $r) {return !dfe_portal_cfg_g()->enable() ? $r : Router::FRONT_NAME;}
+	function afterGetDefaultPath(Sb $sb, string $r):string {return !dfe_portal_cfg_g()->enable() ? $r : Router::FRONT_NAME;}
 }
