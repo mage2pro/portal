@@ -12,9 +12,8 @@ class Index extends \Df\Framework\Action {
 	 * @used-by \Magento\Framework\App\Action\Action::dispatch():
 	 * 		$result = $this->execute();
 	 * https://github.com/magento/magento2/blob/2.2.1/lib/internal/Magento/Framework/App/Action/Action.php#L84-L125
-	 * @return R
 	 */
-	function execute() {
+	function execute():R {
 		df_page_title(dfe_portal_module('html/title'));
 		return df_page_result('Dfe_Portal::root.phtml', 'dfe_portal',
 			# 2017-05-13
