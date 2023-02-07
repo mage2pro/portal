@@ -15,18 +15,18 @@ class Design extends Sb {
 	 * @see \Magento\Theme\Model\View\Design::getConfigurationDesignTheme()
 	 * «How are the default frontend («Luma») and backend design themes set?» https://mage2.pro/t/3897
 	 * @param Sb $sb
+	 * @param \Closure $f
+     * @param string|null $area [optional]
+     * @param array $p [optional]
+	 * @return string|int
 	 */
-	function beforeGetConfigurationDesignTheme(Sb $sb) {
-		if (dfe_portal_cfg_g()->enable()) {
-			/**
-			 * 2017-05-06
-			 * We will set our custom design theme here.
-			 * The default value is «Magento/luma».
-			 * The «_themes» property is not explicitly declared
-			 * by the @see \Magento\Theme\Model\View\Design class
-			 */
-			$sb->{'_themes'}['frontend'] = self::THEME_ID;
-		}
+	function aroundGetConfigurationDesignTheme(Sb $sb, \Closure $f, $area = null, array $p = []) {
+		$area = $area ?: $sb->getArea();
+		# 2017-05-06
+		# We will set our custom design theme here.
+		# The default value is «Magento/luma».
+		# 2022-10-29 The method's implementation has been changed.
+		return dfe_portal_cfg_g()->enable() && 'frontend' === $area ? self::THEME_ID : $f($area, $p);
 	}
 
 	/**

@@ -11,9 +11,7 @@ class Content extends \Dfe\Portal\Block {
 	 * @see \Magento\Payment\Block\Info::$_template
 	 * @return string
 	 */
-	function getTemplate() {return $this->m(sprintf('page/%s.phtml',
-		df_trim(df_request_o()->getPathInfo(), '/') ?: 'main'
-	));}
+	function getTemplate() {return $this->m(sprintf('page/%s.phtml', df_trim(df_request_o()->getPathInfo(), '/') ?: 'main'));}
 
 	/**
 	 * 2017-05-07

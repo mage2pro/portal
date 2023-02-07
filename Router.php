@@ -42,12 +42,8 @@ class Router implements IRouter {
 	 */
 	function match(IRequest $req) {
 		$r = null; /** @var IAction|ActionForward|null $r */
-		/**
-		 * 2017-05-04
-		 * @uses \Magento\Framework\App\Request\Http::getPathInfo() returns a string like «/about-us/».
-		 * @var string $path
-		 */
-		$path = df_trim($req->getPathInfo(), '/');
+		/** 2017-05-04 @uses \Magento\Framework\App\Request\Http::getPathInfo() returns a string like «/about-us/». */
+		$path = df_trim($req->getPathInfo(), '/'); /** @var string $path */
 		if (df_phtml_exists("page/$path.phtml", dfe_portal_module_name())) {
 			/**
 			 * 2017-05-04

@@ -14,9 +14,7 @@ abstract class Block extends _P {
 	 * @param string $alt
 	 * @return string
 	 */
-	public function img($file, $alt) {return df_tag('img', [
-		'alt' => $alt, 'src' => $this->getViewFileUrl($this->m("i/$file"))
-	]);}
+	function img($file, $alt) {return df_tag('img', ['alt' => $alt, 'src' => $this->getViewFileUrl($this->m("i/$file"))]);}
 
 	/**
 	 * 2017-05-11

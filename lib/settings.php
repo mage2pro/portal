@@ -3,7 +3,7 @@ use Dfe\Portal\Settings\General;
 /**  
  * 2017-05-06
  * @used-by \Dfe\Portal\Plugin\Store\Model\PathConfig::afterGetDefaultPath()
- * @used-by \Dfe\Portal\Plugin\Theme\Model\View\Design::beforeGetConfigurationDesignTheme()
+ * @used-by \Dfe\Portal\Plugin\Theme\Model\View\Design::aroundGetConfigurationDesignTheme()
  * @return General
  */
 function dfe_portal_cfg_g() {return General::s();}
