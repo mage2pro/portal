@@ -20,7 +20,7 @@ class Content extends \Dfe\Portal\Block {
 	 * @see \Magento\Framework\View\Element\AbstractBlock::_prepareLayout()
 	 * @used-by \Magento\Framework\View\Element\AbstractBlock::setLayout()
 	 */
-	final protected function _prepareLayout() {
+	final protected function _prepareLayout():void {
 		if (dfe_portal_cfg_g()->enable()) {
 			df_page_config()->addPageAsset('Dfe_Portal::main.css');
 			df_page_config()->addPageAsset($this->m('main.css'));
