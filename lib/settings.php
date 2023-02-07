@@ -19,6 +19,5 @@ function dfe_portal_module(string $k) {return dfac(function() {return dfa_deep(
 /**
  * 2017-05-07
  * @used-by \Dfe\Portal\Block\Content::getTemplate()
- * @return string
  */
-function dfe_portal_module_name() {return dfe_portal_cfg_g()->moduleName();}
+function dfe_portal_module_name():string {return dfe_portal_cfg_g()->moduleName();}
