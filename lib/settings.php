@@ -10,10 +10,9 @@ function dfe_portal_cfg_g():General {return General::s();}
 /**
  * 2017-05-07
  * @used-by \Dfe\Portal\Controller\Index\Index::execute()
- * @param string $k
  * @return string|null|array(string => mixed)
  */
-function dfe_portal_module($k) {return dfac(function() {return dfa_deep(
+function dfe_portal_module(string $k) {return dfac(function() {return dfa_deep(
 	df_package(dfe_portal_module_name()), 'df/portal'
 );}, $k);}
 
