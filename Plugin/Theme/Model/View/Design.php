@@ -14,8 +14,6 @@ class Design extends Sb {
 	 * without need to select our design theme manually by the store's administrator.
 	 * @see \Magento\Theme\Model\View\Design::getConfigurationDesignTheme()
 	 * «How are the default frontend («Luma») and backend design themes set?» https://mage2.pro/t/3897
-	 * @param Sb $sb
-	 * @param \Closure $f
      * @param string|null $area [optional]
      * @param array $p [optional]
 	 * @return string|int
