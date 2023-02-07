@@ -14,5 +14,5 @@ final class PathConfig  {
 	 * @param string $r
 	 * @return string
 	 */
-	function afterGetDefaultPath(Sb $sb, $r) {return !dfe_portal_cfg_g()->enable() ? $r : Router::FRONT_NAME;}
+	function afterGetDefaultPath(Sb $sb, string $r) {return !dfe_portal_cfg_g()->enable() ? $r : Router::FRONT_NAME;}
 }
