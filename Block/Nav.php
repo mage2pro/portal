@@ -9,7 +9,6 @@ class Nav extends \Dfe\Portal\Block {
 	 * @override
 	 * @see \Magento\Framework\View\Element\Template::getTemplate()
 	 * @see \Magento\Payment\Block\Info::$_template
-	 * @return string
 	 */
-	function getTemplate() {return $this->m('block/nav.phtml');}
+	function getTemplate():string {return $this->m('block/nav.phtml');}
 }
