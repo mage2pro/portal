@@ -9,9 +9,10 @@ class Content extends \Dfe\Portal\Block {
 	 * @override
 	 * @see \Magento\Framework\View\Element\Template::getTemplate()
 	 * @see \Magento\Payment\Block\Info::$_template
-	 * @return string
 	 */
-	function getTemplate() {return $this->m(sprintf('page/%s.phtml', df_trim(df_request_o()->getPathInfo(), '/') ?: 'main'));}
+	function getTemplate():string {return $this->m(sprintf(
+		'page/%s.phtml', df_trim(df_request_o()->getPathInfo(), '/') ?: 'main'
+	));}
 
 	/**
 	 * 2017-05-07
