@@ -10,11 +10,9 @@ abstract class Block extends _P {
 	/**
 	 * 2017-05-11
 	 * @final Unable to use the PHP «final» keyword here because of the M2 code generation.
-	 * @param string $file
-	 * @param string $alt
 	 * @return string
 	 */
-	function img($file, $alt) {return df_tag('img', ['alt' => $alt, 'src' => $this->getViewFileUrl($this->m("i/$file"))]);}
+	function img(string $file, string $alt) {return df_tag('img', ['alt' => $alt, 'src' => $this->getViewFileUrl($this->m("i/$file"))]);}
 
 	/**
 	 * 2017-05-11
