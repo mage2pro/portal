@@ -21,8 +21,6 @@ abstract class Block extends _P {
 	 * @used-by \Dfe\Portal\Block\Content::_prepareLayout()
 	 * @used-by \Dfe\Portal\Block\Content::getTemplate()
 	 * @used-by \Dfe\Portal\Block\Nav::getTemplate()
-	 * @param string $f
-	 * @return string
 	 */
-	final protected function m(string $f) {return df_asset_name($f, dfe_portal_module_name());}
+	final protected function m(string $f):string {return df_asset_name($f, dfe_portal_module_name());}
 }
