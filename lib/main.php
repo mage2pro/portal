@@ -6,5 +6,5 @@
  */
 function dfe_portal_plugins():array {return dfcf(function():array {return df_map_kr(
 	function($m, $p) {return [$m, dfa_deep($p, 'df/portal/plugin/title')];}
-	,array_filter(dfe_packages(), function($p) {return dfa_deep($p, 'df/portal');})
+	,array_filter(dfe_packages(), function(array $p) {return dfa_deep($p, 'df/portal');})
 );});}
