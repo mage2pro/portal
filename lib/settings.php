@@ -18,6 +18,8 @@ function dfe_portal_module(string $k) {return dfac(function() {return dfa_deep(
 
 /**
  * 2017-05-07
- * @used-by \Dfe\Portal\Block\Content::getTemplate()
+ * @used-by dfe_portal_module()
+ * @used-by \Dfe\Portal\Block::m()
+ * @used-by \Dfe\Portal\Router::match()
  */
 function dfe_portal_module_name():string {return dfe_portal_cfg_g()->moduleName();}
