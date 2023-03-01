@@ -34,5 +34,3 @@ class Design extends Sb {
 	 */
 	const THEME_ID = 'df/portal';
 }
-
-
