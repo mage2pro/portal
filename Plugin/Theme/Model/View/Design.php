@@ -24,7 +24,7 @@ class Design extends Sb {
 		# We will set our custom design theme here.
 		# The default value is «Magento/luma».
 		# 2022-10-29 The method's implementation has been changed.
-		return dfe_portal_cfg_g()->enable() && 'frontend' === $area ? self::THEME_ID : $f($area, $p);
+		return dfe_portal_enabled() && 'frontend' === $area ? self::THEME_ID : $f($area, $p);
 	}
 
 	/**

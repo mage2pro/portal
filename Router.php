@@ -45,7 +45,7 @@ class Router implements IRouter {
 		# 2023-08-01
 		# «Dfe\Portal\Settings\General::moduleName(): Return value must be of type string, null returned»:
 		# https://github.com/mage2pro/portal/issues/4
-		if (dfe_portal_cfg_g()->enable()) {
+		if (dfe_portal_enabled()) {
 			/** 2017-05-04 @uses \Magento\Framework\App\Request\Http::getPathInfo() returns a string like «/about-us/». */
 			$path = df_trim($req->getPathInfo(), '/'); /** @var string $path */
 			if (df_phtml_exists("page/$path", dfe_portal_module_name())) {

@@ -1,12 +1,13 @@
 <?php
-use Dfe\Portal\Settings\General;
-/**  
- * 2017-05-06
+use Dfe\Portal\Settings\General as S;
+/**
+ * 2023-08-01
+ * @used-by \Dfe\Portal\Block\Content::_prepareLayout()
  * @used-by \Dfe\Portal\Plugin\Store\Model\PathConfig::afterGetDefaultPath()
  * @used-by \Dfe\Portal\Plugin\Theme\Model\View\Design::aroundGetConfigurationDesignTheme()
  * @used-by \Dfe\Portal\Router::match()
  */
-function dfe_portal_cfg_g():General {return General::s();}
+function dfe_portal_enabled(): bool {return S::s()->enable();}
 
 /**
  * 2017-05-07
@@ -23,4 +24,4 @@ function dfe_portal_module(string $k) {return dfac(function() {return dfa_deep(
  * @used-by \Dfe\Portal\Block::m()
  * @used-by \Dfe\Portal\Router::match()
  */
-function dfe_portal_module_name():string {return dfe_portal_cfg_g()->moduleName();}
+function dfe_portal_module_name():string {return S::s()->moduleName();}

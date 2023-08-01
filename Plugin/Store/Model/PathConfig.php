@@ -10,5 +10,5 @@ final class PathConfig  {
 	 * without need to do it manually by the store's administrator.
 	 * @see \Magento\Store\Model\PathConfig::getDefaultPath()
 	 */
-	function afterGetDefaultPath(Sb $sb, string $r):string {return !dfe_portal_cfg_g()->enable() ? $r : Router::FRONT_NAME;}
+	function afterGetDefaultPath(Sb $sb, string $r):string {return !dfe_portal_enabled() ? $r : Router::FRONT_NAME;}
 }
