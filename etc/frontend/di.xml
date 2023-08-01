@@ -13,12 +13,10 @@
 This router will be called just after the built-in \Magento\Framework\App\Router\Base router.
 «The built-in frontend routers»: https://mage2.pro/t/3878
 «How is the base router (Magento\Framework\App\Router\Base) implemented?» https://mage2.pro/t/3880
-
 2017-12-31
 "«Front controller reached 100 router match iterations» in Magento 2.2.2
 because the base router ordering has been changed from 20 to 30":
-https://github.com/mage2pro/portal/issues/1
--->
+https://github.com/mage2pro/portal/issues/1 -->
 					<item name='sortOrder' xsi:type='string'>31</item>
 				</item>
 			</argument>
