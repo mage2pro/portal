@@ -5,7 +5,7 @@ namespace Dfe\Portal\Settings;
 final class General extends \Df\Config\Settings {
 	/**        
 	 * 2017-05-06  
-	 * @used-by \Dfe\Portal\Block\Content::getTemplate()
+	 * @used-by dfe_portal_module_name()
 	 */
 	function moduleName():string {return $this->v();}
 	
