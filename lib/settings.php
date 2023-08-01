@@ -4,6 +4,7 @@ use Dfe\Portal\Settings\General;
  * 2017-05-06
  * @used-by \Dfe\Portal\Plugin\Store\Model\PathConfig::afterGetDefaultPath()
  * @used-by \Dfe\Portal\Plugin\Theme\Model\View\Design::aroundGetConfigurationDesignTheme()
+ * @used-by \Dfe\Portal\Router::match()
  */
 function dfe_portal_cfg_g():General {return General::s();}
 

@@ -42,42 +42,47 @@ class Router implements IRouter {
 	 */
 	function match(IRequest $req) {
 		$r = null; /** @var IAction|ActionForward|null $r */
-		/** 2017-05-04 @uses \Magento\Framework\App\Request\Http::getPathInfo() returns a string like «/about-us/». */
-		$path = df_trim($req->getPathInfo(), '/'); /** @var string $path */
-		if (df_phtml_exists("page/$path", dfe_portal_module_name())) {
-			/**
-			 * 2017-05-04
-			 * Note #1
-			 * It passes the control to the @see \Magento\Framework\App\Router\Base
-			 * which will setup the standard layout engine.
-			 * The built-in CMS module behaves the same way: @see \Magento\Cms\Controller\Router::match()
-			 * «How is the CMS frontend router implemented?» https://mage2.pro/t/3879
-			 * «How is the base router implemented?» https://mage2.pro/t/3880
-			 * Note #2
-			 * The @uses \Magento\Framework\App\Request\Http::setModuleName() parameters
-			 * should be the same as the specified as the «frontName» attribute value in the routes.xml:
-			 *	<router id='standard'>
-			 *		<route id='Dfe_Portal' frontName='dfe-portal'>
-			 *			<module name='Dfe_Portal'/>
-			 *		</route>
-			 *	</router>
-			 * It will be used by the base router: @see \Magento\Framework\App\Router\Base
-			 * Step 1:
-			 * @see \Magento\Framework\App\Router\Base::matchAction():
-		 	 *	$moduleFrontName = $this->matchModuleFrontName($request, $params['moduleFrontName']);
-			 * https://github.com/magento/magento2/blob/2.1.6/lib/internal/Magento/Framework/App/Router/Base.php#L266
-			 * Step 2:
-			 * @see \Magento\Framework\App\Router\Base::matchModuleFrontName():
-			 *	if ($request->getModuleName()) {
-			 *		$moduleFrontName = $request->getModuleName();
-			 *	}
-			 * https://github.com/magento/magento2/blob/2.1.6/lib/internal/Magento/Framework/App/Router/Base.php#L197-L199
-			 */
-			$req->setModuleName(self::FRONT_NAME);
-			$req->setControllerName('index');
-			$req->setActionName('index');
-			$req->setParam('id', $path);
-			$r = df_action_c_forward();
+		# 2023-08-01
+		# «Dfe\Portal\Settings\General::moduleName(): Return value must be of type string, null returned»:
+		# https://github.com/mage2pro/portal/issues/4
+		if (dfe_portal_cfg_g()->enable()) {
+			/** 2017-05-04 @uses \Magento\Framework\App\Request\Http::getPathInfo() returns a string like «/about-us/». */
+			$path = df_trim($req->getPathInfo(), '/'); /** @var string $path */
+			if (df_phtml_exists("page/$path", dfe_portal_module_name())) {
+				/**
+				 * 2017-05-04
+				 * Note #1
+				 * It passes the control to the @see \Magento\Framework\App\Router\Base
+				 * which will setup the standard layout engine.
+				 * The built-in CMS module behaves the same way: @see \Magento\Cms\Controller\Router::match()
+				 * «How is the CMS frontend router implemented?» https://mage2.pro/t/3879
+				 * «How is the base router implemented?» https://mage2.pro/t/3880
+				 * Note #2
+				 * The @uses \Magento\Framework\App\Request\Http::setModuleName() parameters
+				 * should be the same as the specified as the «frontName» attribute value in the routes.xml:
+				 *	<router id='standard'>
+				 *		<route id='Dfe_Portal' frontName='dfe-portal'>
+				 *			<module name='Dfe_Portal'/>
+				 *		</route>
+				 *	</router>
+				 * It will be used by the base router: @see \Magento\Framework\App\Router\Base
+				 * Step 1:
+				 * @see \Magento\Framework\App\Router\Base::matchAction():
+				 *	$moduleFrontName = $this->matchModuleFrontName($request, $params['moduleFrontName']);
+				 * https://github.com/magento/magento2/blob/2.1.6/lib/internal/Magento/Framework/App/Router/Base.php#L266
+				 * Step 2:
+				 * @see \Magento\Framework\App\Router\Base::matchModuleFrontName():
+				 *	if ($request->getModuleName()) {
+				 *		$moduleFrontName = $request->getModuleName();
+				 *	}
+				 * https://github.com/magento/magento2/blob/2.1.6/lib/internal/Magento/Framework/App/Router/Base.php#L197-L199
+				 */
+				$req->setModuleName(self::FRONT_NAME);
+				$req->setControllerName('index');
+				$req->setActionName('index');
+				$req->setParam('id', $path);
+				$r = df_action_c_forward();
+			}
 		}
 		return $r;
 	}
