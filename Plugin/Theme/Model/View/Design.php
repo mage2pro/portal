@@ -2,8 +2,11 @@
 namespace Dfe\Portal\Plugin\Theme\Model\View;
 use Magento\Theme\Model\View\Design as Sb;
 # 2017-05-06
+# 2023-08-06
+# "Prevent interceptors generation for the plugins extended from interceptable classes":
+# https://github.com/mage2pro/core/issues/327
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
-class Design extends Sb {
+class Design extends Sb implements \Magento\Framework\ObjectManager\NoninterceptableInterface {
 	/** 2017-05-06 @final */
 	function __construct() {}
 
